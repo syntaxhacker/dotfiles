@@ -1,0 +1,12 @@
+[user]
+	name = syntaxhacker
+	email = syntaxhacker@users.noreply.github.com
+[core]
+	sshCommand = ssh -i ~/.ssh/id_ed25519
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
